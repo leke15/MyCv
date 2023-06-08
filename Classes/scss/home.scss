@@ -44,3 +44,15 @@
     -o-animation-timing-function: linear;
     animation-timing-function: linear;
   }
+
+  nav{
+    width: 1000px;
+    margin-top: -220px;
+    background-color: gray;
+    img{
+        width: 100px;
+    }
+    a{
+        margin-left: 30px;
+    }
+  }
