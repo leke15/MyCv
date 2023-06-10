@@ -1,18 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="..\Classes\scss\home.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="..\Classes\scss\home.css" />
     <title>Document</title>
-</head>
-<body>
-    <nav>
-        <img src="..\Images/Black And White Rakia Design Studio Logo (1)-no-bg.png" alt="Ignite Logo">
-        <span><a href="home.html">Home</a></span>
-        <span><a href="works.html">Works</a></span>
-        <span><a href="contact.html">Contact</a></span>
-    </nav>
-</body>
+    <script src="..\Javascript/home.js"></script>
+  </head>
+    
+  <body>
+    <div class="svg-container">
+      <!-- I crated SVG with: https://codepen.io/anthonydugois/pen/mewdyZ -->
+      <svg viewbox="0 0 800 400" class="svg">
+        <path id="curve" fill="#e27daf" d="M 800 300 Q 400 350 0 300 L 0 0 L 800 0 L 800 300 Z">
+        </path>
+      </svg>
+    </div>
+    <header>
+    <img src="..\Images/Black And White Rakia Design Studio Logo (1)-no-bg.png" alt=" Adx Ignite" id="logo">
+    <div id="navBtns" class="center">
+      <button type="button" class="btn-5" id="home">Home</button>
+      <button type="button" class="btn-5" id="work">Work</button>
+      <button type="button" class="btn-5" id="contact">Contact</button>
+    </div>
+  </header>
+  <main>
+    <section id="intro">
+      <article>
+        <p>
+          Hi there! , And welcome to Ignite... Well ADX Ignite this is a page
+          about my various works and skills as well contact.<br />
+          My name is Daniel Ayomidotun I speak many languages namely : English,
+          Javascript , Html , CSS AND SCSS. I am currently a student in
+          HyperionDev studying Web and Software development so basically I
+          aspire to be a UI/UX designer and also a backend system developer.<br />
+          Well as said this is ADX and if you're wondering "Why ADX?" well it's
+          a branch from ADX companys (soon to be...). So Uhmm welcome again
+          check out my works above I'm sure it'll interest you
+        </p>
+      </article>
+    </section>
+    <section id="gallery">
+      <div class="slider">
+        <div class="images">
+          <input type="radio" name="radioBtn" id="radio1" placeholder="no" />
+          <input type="radio" name="radioBtn" id="radio2" placeholder="no" />
+          <input type="radio" name="radioBtn" id="radio3" placeholder="no" />
+          <img src="..\Images/web2.png" class="m1" alt=" website2" id="img1" />
+          <img
+            src="..\Images/Publish_Website.png"
+            class="m2"
+            alt="AdxPhotography"
+            id="img2"
+          />
+        </div>
+        <div class="dots">
+          <label for="radio1"></label>
+          <label for="radio2"></label>
+          <label for="radio3"></label>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <img src="..\Images/R (1).png" alt="linkedIn" id="linkedIn">
+    <span> 
+    <img src="..\Images/R-no-bg.png" alt="Instagram" id="Instagram">
+  </span>
+  <br>
+    <small>Design By <a href="http://armantaherian.com">Arman</a>.</small>
+  </footer>
+  </body>
 </html>
