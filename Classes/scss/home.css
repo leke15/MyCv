@@ -1,33 +1,218 @@
-@keyframes bg-scrolling-reverse {
-  100% {
-    background-position: 50px 50px;
-  }
-}
-@keyframes bg-scrolling {
-  0% {
-    background-position: 50px 50px;
-  }
-}
-body {
-  margin-top: 13.5rem;
-  color: #999;
-  /* img size is 50x50 */
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
-  /* Fx 5+ */
-  /* Opera 12+ */
-  animation: bg-scrolling-reverse 0.92s infinite;
-  /* IE 10+ */
-  animation-timing-function: linear;
+*, *:after, *:before {
+  margin: 0;
+  padding: 0;
 }
 
-nav {
-  width: 1000px;
-  margin-top: -220px;
-  background-color: gray;
+.svg-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
 }
-nav img {
-  width: 100px;
+
+svg path {
+  transition: 0.1s;
 }
-nav a {
-  margin-left: 30px;
+svg:hover path {
+  d: path("M 800 300 Q 400 250 0 300 L 0 0 L 800 0 L 800 300 Z");
+}
+
+body {
+  background: #fff;
+  color: #333;
+  font-family: "Ubuntu", sans-serif;
+  position: relative;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+header {
+  color: #fff;
+  padding-top: 10vw;
+  padding-bottom: 5vw;
+  text-align: center;
+}
+
+main {
+  background: linear-gradient(to bottom, #ffffff 0%, #ffd6ee 100%);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 10vh 0 10vh;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+main::after {
+  border-right: 2px dashed #eee;
+  content: "";
+  position: absolute;
+  top: calc(10vh + 1.618em);
+  bottom: 0;
+  left: 40%;
+  width: 2px;
+  height: 50%;
+}
+
+footer {
+  background: #200711;
+  padding: 5vh 0;
+  text-align: center;
+}
+
+#Instagram {
+  width: 50px;
+  height: 50px;
+}
+
+#linkedIn {
+  width: 50px;
+  height: 50px;
+}
+
+small {
+  opacity: 0.5;
+  font-weight: 300;
+}
+small a {
+  color: inherit;
+}
+
+#logo {
+  width: 250px;
+  margin-left: -20px;
+  margin-top: -20px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+button,
+button::after {
+  transition: all 0.3s;
+}
+
+button {
+  background: none;
+  border: 3px solid #380218;
+  border-radius: 5px;
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 1em auto;
+  padding: 2em 6em;
+  position: relative;
+  text-transform: uppercase;
+}
+
+button::before,
+button::after {
+  background: #fff;
+  content: "";
+  position: absolute;
+  z-index: -1;
+}
+
+button:hover {
+  color: #500734;
+}
+
+/* BUTTON 5 */
+.btn-5 {
+  overflow: hidden;
+}
+
+.btn-5::after {
+  /*background-color: #f00;*/
+  height: 100%;
+  left: -35%;
+  top: 0;
+  transform: skew(50deg);
+  transition-duration: 0.6s;
+  transform-origin: top left;
+  width: 0;
+}
+
+.btn-5:hover:after {
+  height: 100%;
+  width: 135%;
+}
+
+#intro {
+  float: left;
+  width: 450px;
+  height: 345px;
+  font-family: helvetica;
+  font-size: 18px;
+  color: black;
+  border: 1px solid purple;
+  border-radius: 5px;
+  padding: 10px;
+  margin-left: 40px;
+  line-height: 1.5;
+  box-shadow: 10px 5px #dddee1;
+}
+
+#gallery {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -200px;
+}
+#gallery * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.slider {
+  position: relative;
+  width: 77.5%;
+  overflow: hidden;
+}
+
+.images {
+  width: 100%;
+  display: flex;
+}
+.images img {
+  width: 800px;
+  height: 100%;
+  transition: all 0.15 ease;
+}
+.images input {
+  display: none;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+.dots label {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid black;
+  transition: all 0.15s ease;
+}
+
+.dots label:hover {
+  background-color: blue;
+}
+
+#radio1:checked ~ .m1 {
+  margin-left: 0px;
+}
+
+#radio2:checked ~ .m2 {
+  margin-left: -100%;
 }/*# sourceMappingURL=home.css.map */
