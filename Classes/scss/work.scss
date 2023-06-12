@@ -1,0 +1,69 @@
+body {
+	background: linear-gradient(-45deg, #ee7752, #ffd6ee, #AD1DEB
+    , #6E72FC);
+	background-size: 400% 400%;
+	-webkit-animation: gradient 15s ease infinite;
+	        animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@-webkit-keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+#logo{
+    width: 200px;
+    margin-top: -20px;
+}
+
+.services{
+    margin: 90px auto;
+    text-align: center;
+}
+
+h1{
+    letter-spacing: 1px;
+    font-family: random($limit: 1);
+}
+
+h1::after{
+    content: '';
+    margin: 10px auto;
+    display: block;
+    width: 150px;
+    background: white;
+    height: 3px;
+}
+
+img{
+    width: 200px;
+    border-radius: 10px;
+}
+
+.col-md-3{
+    margin-left: 180px;
+}
+
+section{
+	display: none;
+}
