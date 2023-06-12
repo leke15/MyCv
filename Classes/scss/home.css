@@ -1,11 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("../../Images/back.jpg");
+  /* Set a specific height */
+  min-height: 300px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header h1 {
+  font-family: "Geologica", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  color: white;
+  position: relative;
+  padding-top: 30px;
 }
 
 nav {
   background-color: transparent;
   border: 1px solid black;
-  border-radius: 15px;
+  width: 190vh;
+  height: 80px;
+  margin-left: 20px;
+  padding: 10px;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+  font-family: "Raleway", sans-serif;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav ul li {
+  display: inline-flex;
+  padding-left: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  font-weight: 900;
+  font-size: 1.8rem;
+  color: black;
+  font-family: "Raleway", sans-serif;
 }
 
 .content {
@@ -16,6 +69,22 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
+}
+
+.page {
+  height: 100vh;
+  background-color: #e27daf;
+}
+
+.intro-text {
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  font-weight: 200px;
+  color: #ffd6ee;
+  text-align: center;
+  width: 800px;
+  padding-top: 20px;
+  margin-left: 350px;
 }
 
 footer {
@@ -31,81 +100,11 @@ small {
   opacity: 0.5;
   font-weight: 300;
 }
-small a {
-  color: inherit;
-}
-
-#logo {
-  width: 350px;
-  margin-left: -20px;
-  margin-top: -100px;
-}
-
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 200px;
-}
-
-button,
-button::after {
-  transition: all 0.3s;
-}
-
-button {
-  background: none;
-  border: 3px solid #380218;
-  border-radius: 5px;
-  color: rgba(255, 68, 68, 0.9333333333);
-  display: block;
-  font-size: 13px;
-  font-weight: bold;
-  margin: 1em auto;
-  padding: 2em 6em;
-  position: relative;
-  text-transform: uppercase;
-}
-
-button::before,
-button::after {
-  background: #fdfe34;
-  content: "";
-  position: absolute;
-  z-index: -1;
-}
-
-button:hover {
-  color: #500734;
-}
-
-/* BUTTON 5 */
-.btn-5 {
-  overflow: hidden;
-}
-
-.btn-5::after {
-  /*background-color: #f00;*/
-  height: 100%;
-  left: -35%;
-  top: 0;
-  transform: skew(50deg);
-  transition-duration: 0.6s;
-  transform-origin: top left;
-  width: 0;
-}
-
-.btn-5:hover:after {
-  height: 100%;
-  width: 135%;
-}
 
 #gallery {
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -200px;
 }
 #gallery * {
   box-sizing: border-box;
@@ -115,7 +114,7 @@ button:hover {
 
 .slider {
   position: relative;
-  width: 77.5%;
+  width: 50%;
   overflow: hidden;
 }
 
