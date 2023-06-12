@@ -1,62 +1,23 @@
-*, *:after, *:before {
-  margin: 0;
-  padding: 0;
+
+
+html{
+  scroll-behavior: smooth;
 }
 
-.svg-container {
-  position: absolute;
+nav{
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+.content{
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
   top: 0;
-  right: 0;
-  left: 0;
-  z-index: -1;
-}
-
-svg {
-  path {
-    transition: .1s;
-  }
-
-  &:hover path {
-    d: path("M 800 300 Q 400 250 0 300 L 0 0 L 800 0 L 800 300 Z");
-  }
-}
-
-body {
-  background: #fff;
-  color: #333;
-  font-family: 'Ubuntu', sans-serif;
-  position: relative;
-}
-
-h3 {
-  font-weight: 400;
-}
-
-header {
-  color: #fff;
-  padding-top: 10vw;
-  padding-bottom: 5vw;
-  text-align: center;
-}
-
-main {
-  background: linear-gradient(to bottom, #ffffff 0%, #ffd6ee 100%);
-  border-bottom: 1px solid rgba(0, 0, 0, .2);
-  padding: 10vh 0 10vh;
-  position: relative;
-  text-align: center;
-  overflow: hidden;
-
-  &::after {
-    border-right: 2px dashed #eee;
-    content: '';
-    position: absolute;
-    top: calc(10vh + 1.618em);
-    bottom: 0;
-    left: 40%;
-    width: 2px;
-    height: 50%;
-  }
+  width: 100%
 }
 
 footer {
@@ -102,7 +63,7 @@ button {
   background: none;
   border: 3px solid #380218;
   border-radius: 5px;
-  color: #fff;
+  color: #f44e;
   display: block;
   font-size: 13px;
   font-weight: bold;
@@ -114,7 +75,7 @@ button {
 
 button::before,
 button::after {
-  background: #fff;
+  background: #fdfe34;
   content: '';
   position: absolute;
   z-index: -1;
@@ -142,21 +103,6 @@ button:hover {
 .btn-5:hover:after {
   height: 100%;
   width: 135%;
-}
-
-#intro {
-  float: left;
-  width: 450px;
-  height: 345px;
-  font-family: helvetica;
-  font-size: 18px;
-  color: black;
-  border: 1px solid purple;
-  border-radius: 5px;
-  padding: 10px;
-  margin-left: 40px;
-  line-height: 1.5;
-  box-shadow: 10px 5px #dddee1;
 }
 
 #gallery {
