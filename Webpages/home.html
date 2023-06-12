@@ -5,46 +5,94 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="..\Classes\scss\home.css" />
+    <!-- Google Font RaleWay -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geologica:wght@500&family=Raleway:ital,wght@0,400;1,200&family=Titan+One&display=swap"
+      rel="stylesheet"
+    />
+    <!-- End of CDN -->
     <title>Document</title>
-    <script
-src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="..\Javascript/home.js"></script>
-    <script src="https://kit.fontawesome.com/918a4561b3.js" crossorigin="anonymous"></script>
-
+    <!-- Awesome Icons CDN -->
+    <script
+      src="https://kit.fontawesome.com/918a4561b3.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- End of CDN link -->
   </head>
-    
   <body>
-    <img src="..\Images/Black And White Rakia Design Studio Logo (1)-no-bg.png" alt=" Adx Ignite" id="logo">
-    <nav id="navBtns" class="center">
-      <button type="button" class="btn-5" id="home" onclick="location.href='home.html'">Home</button>
-      <button type="button" class="btn-5" id="work" onclick="location.href='works.html'">Work</button>
-      <button type="button" class="btn-5" id="contact" onclick="location.href='contact.html'">Contact</button>
-    </nav>
-  <footer>
-    <i class="fa-brands fa-linkedin-in fa-2xl"></i>
-    <span> 
-    <i class="fa-brands fa-instagram fa-2xl"></i>
-  </span>
-  <br>
-  <br>
-    <small>Design By <a href="http://armantaherian.com">Arman</a>.</small>
-  </footer>
+    <header class="parallax" id="home">
+      <!-- Navigation -->
+      <nav id="navBtns">
+        <p class="logo">ADX IGNITE</p>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#work">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- End of the Navigation -->
+      <h1 id="into-text">Hi There! And Welcome</h1>
+    </header>
+<!-- Welcome Message and Introductions  -->
+    <section class="page">
+      <article>
+       <p class="intro-text"> Hi there again, My name is Daniel Ayomidotun I'm an Inspiring UI/UX web designer and Fullstack developer
+        I am currently a student with HyperionDev with over 4 Months in Javascript and Html training and Implementation.
+        I am a very dedicated and passionate soul and I have a very good sense of humor plus I am able to adapt and work with
+        different people.
+      </p>
+      </article>
 
-  <script>
-    $(document).ready(function(){
-      window.onscroll= function (){scrollFunction()}
+      <div id="gallery">
+        <div class="slider">
+          <div class="images">
+            <input type="radio" name="slide" id="img1" checked>
+            <input type="radio" name="slide" id="img2">
+            
+            <img src="../Images/Publish_Website.png" id="radio1" class="m1">
+            <img src="../Images/web2.png" id="radio2" class="m2">
+          </div>
+          <div class="dots">
+            <label for="img1"></label>
+            <label for="img2"></label>
+          </div>
+        </div>
+      </div>
+      
+    </section>
 
-      let nav = document.getElementById("navBtns");
-      let sticky = nav.offsetTop;
+    <footer>
+      <i class="fa-brands fa-linkedin-in fa-2xl"></i>
+      <span>
+        <i class="fa-brands fa-instagram fa-2xl"></i>
+      </span>
+      <br />
+      <br />
+      <small>Design By <a href="http://armantaherian.com">Arman</a>.</small>
+    </footer>
 
-      function scrollFunction(){
-        if(window.pageYOffset > sticky){
-          nav.classList.add("sticky");
-        }else{
-          nav.classList.remove("sticky")
+    <script>
+      $(document).ready(function () {
+        window.onscroll = function () {
+          scrollFunction();
+        };
+
+        let nav = document.getElementById("navBtns");
+        let sticky = nav.offsetTop;
+
+        function scrollFunction() {
+          if (window.pageYOffset > sticky) {
+            nav.classList.add("sticky");
+          } else {
+            nav.classList.remove("sticky");
+          }
         }
-      }
-    })
-  </script>
+        
+      });
+    </script>
   </body>
 </html>
