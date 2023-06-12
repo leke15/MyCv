@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="..\Classes\scss\home.css" />
     <title>Document</title>
+    <script
+src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="..\Javascript/home.js"></script>
+    <script src="https://kit.fontawesome.com/918a4561b3.js" crossorigin="anonymous"></script>
+
   </head>
     
   <body>
@@ -28,7 +32,7 @@
   <main>
     <section id="intro">
       <article>
-        <p>
+        <p id="introText">
           Hi there! , And welcome to Ignite... Well ADX Ignite this is a page
           about my various works and skills as well contact.<br />
           My name is Daniel Ayomidotun I speak many languages namely : English,
@@ -64,12 +68,21 @@
     </section>
   </main>
   <footer>
-    <img src="..\Images/R (1).png" alt="linkedIn" id="linkedIn">
+    <i class="fa-brands fa-linkedin-in fa-2xl"></i>
     <span> 
-    <img src="..\Images/R-no-bg.png" alt="Instagram" id="Instagram">
+    <i class="fa-brands fa-instagram fa-2xl"></i>
   </span>
+  <br>
   <br>
     <small>Design By <a href="http://armantaherian.com">Arman</a>.</small>
   </footer>
+
+  <script>
+    $(document).ready(function(){
+      $(document).scroll(function(){
+        $("section").slideDown(5000)
+      })
+    })
+  </script>
   </body>
 </html>
