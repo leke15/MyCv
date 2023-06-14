@@ -20,27 +20,32 @@ html {
   background-size: cover;
 }
 
-header h1 {
+.headers {
   font-family: "Geologica", sans-serif;
   font-weight: 500;
+  font-size: 50px;
   text-align: center;
-  color: white;
+  color: plum;
   position: relative;
-  padding-top: 30px;
+  padding-top: 55px;
+}
+
+header {
+  padding-top: 20px;
 }
 
 nav {
   background-color: transparent;
-  border: 1px solid black;
   width: 190vh;
   height: 80px;
-  margin-left: 20px;
+  margin-left: 10px;
   padding: 10px;
 }
 nav a {
   text-decoration: none;
-  color: white;
+  color: plum;
   font-family: "Raleway", sans-serif;
+  margin-top: -50px;
 }
 nav ul {
   display: flex;
@@ -57,7 +62,7 @@ nav ul li {
 .logo {
   font-weight: 900;
   font-size: 1.8rem;
-  color: black;
+  color: plum;
   font-family: "Raleway", sans-serif;
 }
 
@@ -67,24 +72,110 @@ nav ul li {
 
 .sticky {
   position: fixed;
-  top: 0;
-  width: 100%;
+  top: 0.5%;
+  width: 7.5%;
+  height: 28%;
+  border-radius: 10px;
+  border: 1px solid black;
+  z-index: 1;
+  background-color: transparent;
+}
+.sticky a {
+  color: black;
+}
+.sticky ul {
+  display: inline;
+  align-items: normal;
+  justify-content: left;
+}
+.sticky ul > :first-child {
+  margin-left: -15px;
+}
+.sticky ul li {
+  padding: 0;
+  margin-top: 10px;
+  margin-left: 10px;
 }
 
 .page {
   height: 100vh;
-  background-color: #e27daf;
+  background-color: white;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .intro-text {
   font-family: "Raleway", sans-serif;
   font-size: 20px;
   font-weight: 200px;
-  color: #ffd6ee;
+  color: black;
   text-align: center;
   width: 800px;
-  padding-top: 20px;
+  padding-top: 40px;
   margin-left: 350px;
+}
+
+.col-md-3 {
+  margin-left: 180px;
+  grid-column-start: 1;
+}
+
+.service {
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+}
+
+.languages {
+  color: plum;
+  font-weight: 800;
+  font-size: 15px;
+  word-spacing: 12px;
+}
+
+#btn {
+  border-radius: 20px;
+  width: 350px;
+  height: 50px;
+  background: plum;
+  margin-left: 600px;
+  border: none;
+  margin-top: 100px;
+  font-family: "Raleway", sans-serif;
+}
+
+#about-text {
+  width: 700px;
+  height: 300px;
+  margin-left: 160px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 5px 5px plum;
+  font-family: "Raleway", sans-serif;
+}
+
+#me {
+  width: 200px;
+  height: 100px;
+  display: block;
+  margin-left: 900px;
+  margin-right: auto;
+  margin-top: -250px;
+  width: 40%;
+  height: 40%;
+  border-radius: 5px;
+  box-shadow: 5px 5px plum;
+}
+
+#contact-btn {
+  margin-top: 40px;
+  margin-left: 600px;
+  border-radius: 20px;
+  width: 350px;
+  height: 50px;
+  background: plum;
+  border: none;
+  font-family: "Raleway", sans-serif;
 }
 
 footer {
@@ -105,6 +196,7 @@ small {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 20px;
 }
 #gallery * {
   box-sizing: border-box;
@@ -154,5 +246,5 @@ small {
 }
 
 #radio2:checked ~ .m2 {
-  margin-left: -100%;
+  margin-left: -105%;
 }/*# sourceMappingURL=home.css.map */

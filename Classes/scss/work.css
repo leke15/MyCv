@@ -4,6 +4,65 @@ body {
   animation: gradient 15s ease infinite;
   height: 100vh;
 }
+
+.parallax {
+  /* The image used */
+  background-image: url("../../Images/pexels-jessica-lewis-creative-583848.jpg");
+  /* Set a specific height */
+  min-height: 300px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  padding-top: 20px;
+}
+
+.headers {
+  font-family: "Geologica", sans-serif;
+  font-size: 50px;
+  text-align: center;
+  color: black;
+  position: relative;
+  padding-top: 55px;
+  padding-bottom: 30px;
+}
+
+.logo {
+  font-weight: 900;
+  font-size: 1.8rem;
+  color: plum;
+  font-family: "Raleway", sans-serif;
+}
+
+nav {
+  background-color: transparent;
+  width: 190vh;
+  height: 80px;
+  margin-left: 10px;
+  padding: 10px;
+}
+nav a {
+  text-decoration: none;
+  color: black;
+  font-family: "Raleway", sans-serif;
+  margin-top: -40px;
+  font-size: 20px;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav ul li {
+  display: inline-flex;
+  padding-left: 50px;
+  align-items: center;
+  justify-content: center;
+}
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -46,8 +105,20 @@ img {
 
 .col-md-3 {
   margin-left: 180px;
+  font-family: "Raleway", sans-serif;
+  padding-bottom: 50px;
 }
 
 section {
   display: none;
+}
+
+button {
+  width: 150px;
+  height: 50px;
+  background-color: black;
+  color: white;
+  font-family: "Raleway", sans-serif;
+  padding: 10px;
+  border: none;
 }/*# sourceMappingURL=work.css.map */
